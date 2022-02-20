@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;1,600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: aliceblue;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url("https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=800");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  z-index: 10;
+}
+
+footer {
+  background-image: url("https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=800");
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5em 0 0.5em 2em;
+  height: 35px;
+  z-index: 10;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin: 2em 0 0 0;
+}
+
+header span {
+  display: block;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: 1fr 200px 1em;
+}
+@media only screen and (min-width: 992px) {
+  header nav {
+    grid-template-columns: 1fr 200px 5em;
+  }
+}
+
+.navigation__ul {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  grid-column: 2;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+.navigation__li {
+  width: 100%;
+}
+
+li button {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  border: solid 1px transparent;
+}
+
+li button:hover {
+  border: 1px solid black;
+}
+
+.portfolio-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 1em;
+  margin: 200px 0 40px 0;
+}
+
+.portfolio-page__image-container {
+  position: relative;
+}
+
+.portfolio-page__image-container:hover {
+  filter: grayscale(100%);
+}
+
+.portfolio-page__image-container:hover > .overlay {
+  z-index: 2;
+}
+
+.portfolio-page h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+}
+
+.portfolio-page__imageSpan {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 170px;
+  background-image: url("https://images.unsplash.com/photo-1530176928500-2372a88e00b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: 100%;
+  height: calc(100vh - 200px);
+}
+
+.contact-page__div {
+  grid-column: 3;
+  margin-top: 3em;
+}
+
+div a {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 0.3em;
+}
+
+.cv-page {
+  margin-top: 190px;
+  height: 700px;
+  height: calc(100vh - 200px);
+}
+
+.portfolioContent {
+  height: calc(100vh - 240px);
+  margin: 200px 0 40px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.activePage {
+  border-bottom: solid 1px black;
+}
